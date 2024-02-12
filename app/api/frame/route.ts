@@ -1,7 +1,8 @@
-import {NextResponse} from "next/server";
+import {NextRequest, NextResponse} from "next/server";
 
-async function getResponse(req: Request) {
-    const {searchParams}= new URL(req.url)
+async function getResponse(req: NextRequest) {
+    // const {searchParams}= new URL(req.url)
+    const searchParams = req.nextUrl.searchParams
     const id: any = searchParams.get("id")
     const idAsNumber = parseInt(id)
 
@@ -29,7 +30,7 @@ async function getResponse(req: Request) {
     }
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
     return getResponse(req)
 }
 
