@@ -15,7 +15,7 @@ export const metadata:Metadata ={
   openGraph: {
     title: 'Anime FanClub',
     description: 'A fun club for boruto and naruto lovers',
-    images: [`${process.env.NEXT_PUBLIC_GATEWAY_URL}`]
+    images: [`${process.env.NEXT_PUBLIC_GATEWAY_URL}/ipfs/Qma9ebPKfMaSqDdqeioE81dvm261LRrwWfjVuUhJAFBSXw/0.png`]
   },
   other: {
     ...frameMetadata
